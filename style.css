@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+}
+h1, h2 {
+    border-bottom:2px lightgrey solid; 
+    margin: 0;
+    padding: 10px
+}
+ol{
+    border-right:2px lightgray solid;
+    width: 100px;
+    margin: 0;
+    padding-inline: 30px;
+    padding-top: 5px;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 180px 1fr;
+}
+#grid ol{
+    padding-top: 20px;
+}
+#grid #article{
+    padding-right: 10px;
+}
+@media(max-width:700px){
+    #grid{
+    display: block;
+    }
+    ol{
+    border-right:none;
+    }
+    h1, h2 {
+    border-bottom:none; 
+    }

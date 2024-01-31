@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		ol {
+			list-style: none;
+			text-align: center;
+			border-top: 2px solid blue;
+			border-bottom: 2px solid blue;
+			padding: 10px 0;
+			/*내부여백: 10 0 10 0 과 같이 인식 → top 10, right 0, bottom 10, left 0;*/
+		}
+
+		ol li {
+			display: inline;
+			/*block 한 라인을 모두 사용 → inline 한줄에 여러개 배치*/
+		}
+
+		ol li a {
+			text-decoration: none;
+			color: black;
+		}
+
+		ol li a:hover {
+			text-decoration: underline;
+			background: yellow;
+		}
+	</style>
+</head>
+
+<body>
+	<!--번호가 있는 리스트-->
+	<ol>
+		<li><a href="#">Home</a></li>
+		<!--		주소	텍스트-->
+		<!--		 #: 널 링크-->
+		<li><a href="#">Company</a></li>
+		<li><a href="#">Service</a></li>
+		<li><a href="#">Contact</a></li>
+	</ol>
+</body>
+
+</html>

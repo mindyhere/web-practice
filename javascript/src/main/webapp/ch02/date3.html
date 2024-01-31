@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function calc() {
+			let now = new Date();
+			let newYear = new Date(now.getFullYear()+1, 0, 1);
+			/*(now.getFullYear(), now.getMonth()+1, 1) → 다음달*/
+
+			let diff = newYear - now;
+			diff = diff / 1000;
+
+			let seconds = Math.floor(diff % 60);
+			diff = diff / 60;
+
+			let minutes = Math.floor(diff % 60);
+			diff = diff / 60;
+
+			let hours = Math.floor(diff % 24);
+			diff = diff / 24;
+
+			let days = Math.floor(diff);
+
+			let str = `내년 1월 1일까지 <b>${days}일, ${hours}시간, ${minutes}분, ${seconds}초</b> 남았습니다.`;
+			document.getElementById("div1").innerHTML = str;
+			console.log(str);
+			setTimeout("calc()", 1000); 
+			/* setTimeout() 한번만 호출
+			1000밀리세컨드=1초마다 함수호출 → 반복실행 */
+		}
+
+	</script>
+</head>
+
+<!--onload 페이지를 불러왔을 때, 함수실행-->
+<body onload="calc()">
+	<div id="div1">
+		<!--영역 내부에 innerHTML, innerText-->
+	</div>
+</body>
+
+</html>

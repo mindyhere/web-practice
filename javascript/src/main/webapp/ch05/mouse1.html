@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function () {
+			//$(선택).연결();
+			$("img").bind({
+				mouseout: function () {
+					$("img").attr("src", "../images/summer.jpg");
+					// 태그  .attribute 속성
+				},
+				mouseover: function () {
+					$("img").attr("src", "../images/autumn.jpg");
+					$("img").attr("width", "100%");
+					$("img").attr("height", "100%");
+				},
+				click: function () {
+					$("img").attr("src", "../images/winter.jpg");
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<img src="../images/spring.jpg" width="40%" height="40%">
+</body>
+
+</html>

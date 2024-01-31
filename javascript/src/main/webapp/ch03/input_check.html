@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Input check ex.</title>
+	<script>
+		function check() {
+			let name = document.getElementById("name");
+			if (name.value == "") {
+				alert("이름을 입력하세요.");
+				name.focus();
+				return;
+			}
+
+			if (name.value.length >= 3 && name.value.length <= 8) {
+				alert("OK");
+			} else {
+				alert("3~8 글자 내로 입력해주세요.");
+				name.focus();
+				return;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	name:<input type="text" id="name">
+	<input type="button" onclick="check()" value="OK">
+</body>
+
+</html>

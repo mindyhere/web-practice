@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>mouse2 ex.</title>
+	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function () {
+			$("div").mouseover(function () {
+				$("div").text("mouse over");
+				$("div").css("background-color", "pink");
+			});
+
+			$("div").mouseout(function () {
+				$("div").text("mouse out");
+				$("div").css("background-color", "paleturquoise");
+			});
+		});
+	</script>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: paleturquoise;
+		}
+	</style>
+</head>
+
+<body>
+	<div>mouse out</div>
+</body>
+
+</html>

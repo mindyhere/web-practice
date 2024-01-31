@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		img {
+			position: relative;
+			animation: 2s myanim; /*2초 동안 myanim 명령어 실행*/
+			animation-iteration-count: 5; /*반복횟수 5회*/
+		}
+
+		@keyframes myanim {
+			0% {
+				left: 0px;
+				top: 0px;
+			} /*0초*/
+
+			25% {
+				left: 0px;
+				top: 500px;
+			} /*0.5초*/
+
+			50% {
+				left: 500px;
+				top: 500px;
+			} /*1초*/
+
+			75% {
+				left: 500px;
+				top: 0px;
+			} /*1.5초*/
+
+			100% {
+				left: 0px;
+				top: 0px;
+			} /*2초*/
+		}
+	</style>
+</head>
+
+<body>
+	<img src="../images/peaches.jpg" width="20%">
+</body>
+
+</html>

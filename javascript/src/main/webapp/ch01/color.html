@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function change() {
+			p1 = document.getElementById("p1");
+			/*document → 현재문서를 가리키는 객체*/
+			p1.style.color = "red";
+			p1.style.backgroundColor = "yellow";
+		}
+	</script>
+</head>
+
+<body>
+	<!-- id → javascript
+		name → 중복가능, 서버에서 식별 -->
+	<p id="p1">paragraph</p>
+	<!--식별자-->
+	<button type="button" onclick="change()">change color</button>
+</body>
+
+</html>

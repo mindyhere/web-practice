@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>selector1 ex.</title>
+	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+	<script>
+		/* $(document).ready(function(){}); ↔ $(function(){};)	
+		   (현재문서 선택).ready(함수)
+		*/
+		$(function () {
+			$("h2").click(function () {
+			//(요소).이벤트(함수실행)	
+				$(this).css("color", "red");
+				$(this).css("background-color", "yellow");
+				$(this).css("font-size", "2em");	//2em → 폰트 사이즈를 두배로
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h2>heading 1</h2>
+	<h2>heading 2</h2>
+	<h2>heading 3</h2>
+</body>
+
+</html>

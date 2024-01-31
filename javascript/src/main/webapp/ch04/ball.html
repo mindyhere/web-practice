@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>ball ex.</title>
+	<script>
+		let context;
+		let mx = 3, my = 4;	//x, y 증가값
+		let x = 50, y = 50;	//ball의 x, y의 좌표
+
+		function draw() {
+			let canvas = document.getElementById("myCanvas");
+			let context = canvas.getContext("2d");
+
+			context.clearRect(0, 0, 300, 300);
+			// 사각형 지우기 	  x  y  width height
+			context.beginPath();
+			context.fillStyle = "green";
+			context.arc(x, y, 10, 0, Math.PI * 2, false);
+			//원그리기(x, y, 반지름, 시작각도, 끝각도, 반시계방향)
+			context.closePath();
+			context.fill();
+
+			//좌우
+			if (x < (0 + 10) || x > (300 - 10)) {
+				mx = -mx;	// 반대방향
+			}
+			//위아래
+			if (y < (0 + 10) || y > (300 - 10)) {
+				my = -my;
+			}
+			x += mx;
+			y += my;
+		}
+
+		setInterval("draw()", 10);	//따옴표 주의!
+		//setInterval(draw, 10);
+		//			  함수   간격
+	</script>
+	<style>
+		canvas {
+			background-color: yellow;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="300" height="300"></canvas>
+</body>
+
+</html>

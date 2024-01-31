@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		img {
+			margin: 10px;
+			/*외부여백*/
+			padding: 5px;
+			/*내부여백*/
+			border: 1px solid black;
+		}
+
+		.hide {
+			visibility: hidden;
+			/*hidden 숨김 ↔ visible 표시*/
+		}
+	</style>
+</head>
+
+<body>
+	<!--
+		상대경로: . 현재 디렉토리 ↔ .. 상위 디렉토리
+		절대경로
+	-->
+	<img src="../images/peaches.jpg" width="20%" height="20%">
+	<img src="../images/snow.jpg" width="20%" height="20%" class="hide">
+	<img src="../images/sunset.jpg" width="20%" height="20%">
+</body>
+
+</html>

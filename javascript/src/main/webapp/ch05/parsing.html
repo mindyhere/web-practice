@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function () {
+			//getJSON: json 파일 읽어오기
+			$.getJSON("students.json", function (data) {
+				//		경로				실행		전체데이터
+				// [] javascript 객체배열, {key: value, key: value, ...} 한건의 데이터
+				$("#students").append(
+					"<tr><td>num</td><td>name</td><td>tel</td></tr>");
+				$.each(data, function () {
+					//	전체		개별행
+					$("#students").append(`
+					<tr>
+						<td>${this.num}</td>
+						<td>${this.name}</td>
+						<td>${this.tel}</td>
+					</tr>
+					`);
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<table id="students" style="width: 500px;" border="1"></table>
+</body>
+
+</html>

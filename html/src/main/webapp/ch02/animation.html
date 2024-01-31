@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		div {
+			position: absolute;
+			left: 100px;
+			top: 100px;
+			/*절대좌표 설정*/
+
+			width: 100px;
+			height: 100px;
+			border: 2px solid red;
+			background: yellow;
+			/*초기 디자인 설정*/
+
+			transition: width 5s, height 5s, transform 5s;
+			/*변환효과 → 간단한 애니메이션*/
+		}
+
+		div:hover {
+			width: 500px;
+			height: 500px;
+			transform: rotate(180deg);
+			/*transform 옵션 → scale(1.5, 1.5);*/
+			/*크기변환 scale(x축 길이비율, y축 길이비율)*/
+		}
+	</style>
+</head>
+
+<body>
+	<div></div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>input ex</title>
+	<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function () {
+			$("#button1").click(function () {
+				let name = $("#name").val();	
+				//            태그 value 읽기
+				//		   $(변수명).val(값) → 태그 value 변경(doment.getElementById("name").value
+				alert(name);
+				name = prompt("name: ", "Kim");
+				$("#name").val(name);	//변경
+				$("#img1").attr("src", "../images/peach.png");
+				$("#img1").attr({
+					"width": "30%",
+					"height": "30%"
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	name : <input id="name" value=""><br>
+	<img id="img1" src="../images/winter.jpg"><br>
+	<button id="button1">OK</button>
+</body>
+
+</html>

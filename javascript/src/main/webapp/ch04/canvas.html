@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas ex.</title>
+	<script>
+		function init(){
+			let canvas=document.getElementById("myCanvas");
+			let context=canvas.getContext("2d");
+						// context → 2d 그래픽도구
+			context.fillStyle="paleturquoise";
+			context.fillRect(10, 10, 100, 50);	// → (x좌표, y좌표, 가로사이즈, 세로사이즈)
+			context.rect(80, 10, 100, 50);	//배경색 없는 사각형
+			context.strokeStyle="mediumseagreen";
+			context.stroke();
+		}
+		
+	</script>
+</head>
+
+<body onload="init()">
+<canvas id="myCanvas" width="200px" height="100px" style="border: 1px solid red;"></canvas>
+</body>
+
+</html>

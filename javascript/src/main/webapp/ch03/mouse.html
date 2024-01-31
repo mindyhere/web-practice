@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>mouse ex.</title>
+	<script>
+		function mouse_over(obj) {
+			obj.style.border = "2px solid dimgray";
+			obj.style.fontSize = "30px";
+		}
+
+		function mouse_out(obj) {
+			obj.style.border = "";
+			obj.style.fontSize = "12px";
+		}
+	</script>
+</head>
+
+<body>
+	<div style="background-color: lavender ; width: 200px;" 
+	onmouseover="mouse_over(this)" onmouseout="mouse_out(this)">
+	<!-- this: 현재 작업중인 태그를 가리키는 객체(div 태그) -->
+		mouse event</div>
+</body>
+
+</html>

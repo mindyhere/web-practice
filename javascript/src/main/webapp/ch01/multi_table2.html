@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function multi_table() {
+			num = document.getElementById("num").value;
+			if (num.length == 0) return;
+			str = "";
+			for (i = 1; i <= 9; i++) {
+				str += num + " X " + i + " = " + num * i + "<br>";
+			}
+			document.getElementById("result").innerHTML = str; /* → HTML형태로 출력*/
+			/* document.getElementById("result").innerText = str; 
+				→ 텍스트 형태로 출력*/
+		}
+	</script>
+</head>
+
+<body>
+
+	<input type="text" id="num" value="3" size="5">
+	<!-- onkeyup="multi_table()" → 버튼클릭 없이 텍스트 변경될 때 함수호출 	 -->
+	<input type="button" value="OK" onclick="multi_table()">
+	<div id="result"></div>
+
+</body>
+
+</html>

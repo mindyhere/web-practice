@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Timer ex.</title>
+	<!--실행 시 F12 콘솔에서 로그 출력 확인-->
+	<script>
+		let timer;	//변수선언(전역변수)
+		function msg() {
+			console.log("msg 함수 호출...");
+		}
+
+		function start() {
+			//setTimeout("msg()", 1000); 
+			// → 일회용
+			timer = setInterval("msg()", 1000);
+			//		반복			함수	  간격(1초)
+		}
+
+		function stop() {
+			//clearTimeout(timer);
+			clearInterval(timer);
+		}
+	</script>
+</head>
+
+<body>
+	<!-- 버튼클릭 시 각 함수 실행 → 콘솔 로그 확인-->
+	<button onclick="start()">start timer</button>
+	<button onclick="stop()">stop timer</button>
+</body>
+
+</html>

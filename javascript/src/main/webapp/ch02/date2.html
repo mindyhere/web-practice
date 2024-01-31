@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function checkDate() {
+			str_date = document.getElementById("date1").value;
+			document.write(str_date + "<br>");
+			date1 = new Date(str_date); /*선택한 날짜*/
+			today = new Date(); /*현재 날짜*/
+			document.write("time stamp : " + today.getTime() + "<br>");
+			/* getTime() → 1971.1.1부터 현재까지 밀리세컨드로 */
+			diff = today.getTime() - date1.getTime();
+			/*시간차이를 밀리세컨드로*/
+			document.write(diff + "<br>");
+			document.write(diff / (1000 * 60 * 60 * 24));
+			/*밀리세컨드 단위 → 일 단위로 변환*/
+
+			let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			if (days > 7) {
+				alert("7일이 경과되어 환불이 어려습니다.");
+			} else {
+				alert("환불 가능합니다.");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	date : <input type="date" id="date1">
+	<button onclick="checkDate()">OK</button>
+</body>
+
+</html>
